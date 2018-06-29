@@ -3,6 +3,7 @@
 
 DEPRECATED: This script is used to install Kubernetes 1.10.0 without of network.
 该脚本用于在没网络环境下离线部署安装kubernetes 1.10.0。脚本一共有8个模块组成分别是：
+
 1)、服务器初始化
 2)、依赖包安装
 3)、docker安装
@@ -15,11 +16,13 @@ DEPRECATED: This script is used to install Kubernetes 1.10.0 without of network.
 
 #### 适用环境：
 ————————————————————————————————————————————————————
+
 centos 7.2(1511)/centos 7.3(1611) 
 
 
 #### 使用方法：
 ————————————————————————————————————————————————————
+
 安装集群至少需要两个节点，将安装包下载到各个节点上，解压安装包进入安装包执行install脚本，
 按照序列号选项一步步进行安装，若以跳序安装则不能正常完成安装。
 
@@ -34,8 +37,9 @@ Enter a Number:[1-5]
 ```
 注意1：install脚本中的6-8的模块需要在Node节点上完成1-5模块部署后并且加入集群后才能正常安装，
 否则由于集群还没形成不能正常部署dashboard和监控服务。
-```
+
 Node安装：(Node的机器上安装1-5功能模块)
+```
 [root@k8s-node1 k8s_1.10.0_file]# ./install.sh
 1) initial_host       4) load_images        7) install_dashboard
 2) install_dep        5) install_k8s        8) install_heapster
@@ -57,10 +61,11 @@ Master安装：(Master的机器进行初始化master节点)
 2) install_dep        5) install_k8s        8) install_heapster
 3) install_docker     6) k8s_mster_initial
 Enter a Number:[6]
-
 [root@k8s-master1 k8s_1.10.0_file]#source  /root/.bash_profile
+```
 
 Node节点：(node节点加入集群)：
+```
 [root@k8s-node1 k8s_1.10.0_file]#kubeadm join 10.10.8.160:6443 --token yonsi5.jtk59pq8s5txqpat \
 --discovery-token-ca-cert-hash sha256:ebf22d0e20fd56e5648a5922b39e9792d6022b101761314ec4bce3d1cb9f95a3
 ```
