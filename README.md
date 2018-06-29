@@ -25,7 +25,7 @@ centos 7.2(1511)/centos 7.3(1611)
 安装集群至少需要两个节点，将安装包下载到各个节点上，解压安装包进入安装包执行install脚本，
 按照序列号选项一步步进行安装，若以跳序安装则不能正常完成安装。
 
-setp 1:</br>
+**setp 1:**</br>
 Master安装：(Masetr的机器上安装1-5功能模块)
 ```
 [root@k8s-master1 k8s_1.10.0_file]# ./install.sh
@@ -45,14 +45,14 @@ Node安装：(Node的机器上安装1-5功能模块)
 3) install_docker     6) k8s_mster_initial
 Enter a Number:[1-5]
 ```
-setp 2：</br>
+**setp 2：**</br>
 
 Master和Node的/etc/hosts文件中添加：</br>
-Master的IP  刚刚设置的Master的主机名 </br>
-Node的IP    刚刚设置的Node的主机名 </br>
+Master的IP   刚刚设置的Master的主机名 </br>
+Node的IP     刚刚设置的Node的主机名 </br>
 
 
-setp 3:</br>
+**setp 3:**</br>
 Master安装：(Master的机器进行初始化master节点)
 ```
 [root@k8s-master1 k8s_1.10.0_file]# ./install.sh
@@ -60,6 +60,7 @@ Master安装：(Master的机器进行初始化master节点)
 2) install_dep        5) install_k8s        8) install_heapster
 3) install_docker     6) k8s_mster_initial
 Enter a Number:[6]
+
 [root@k8s-master1 k8s_1.10.0_file]#source  /root/.bash_profile
 ```
 
