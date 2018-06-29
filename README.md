@@ -90,6 +90,9 @@ Node节点：(node节点加入集群)：
 5、dashboard：</br>
    https://masterip:32666
 
+6、grafan监控端口：</br>
+   http://masterip:30080
+
 #### kubernetes API开启非安全端口8080：
 ————————————————————————————————————————————————————</br>
 在集群安装完成后编辑如下文件进行修改api配置：
