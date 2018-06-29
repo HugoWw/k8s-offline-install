@@ -12,6 +12,7 @@ DEPRECATED: This script is used to install Kubernetes 1.10.0 without of network.
 7)、dashboard安装 </br>
 8)、heapster监控安装 </br>
 
+资源下载：链接：https://pan.baidu.com/s/1q53WEZzSmIrrOW_gXzekcw 密码：soqo
 
 #### 适用环境：
 ————————————————————————————————————————————————————</br>
