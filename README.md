@@ -79,7 +79,7 @@ Node节点：(node节点加入集群)：
    http://masterip:8080/api/v1/namespaces/kube-system/services/kubernetes-dashboard/
 
 2、influxdb的api:</br>
-   http://masterip:30086/query?q="sql "
+   http://masterip:30086/query?q="SHOW+DATABASES&db=_internal"
 
 3、influxdb的UI界面：</br>
    http://masterip:30083
