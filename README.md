@@ -2,16 +2,15 @@
 ————————————————————————————————————————————————————
 
 DEPRECATED: This script is used to install Kubernetes 1.10.0 without of network.
-该脚本用于在没网络环境下离线部署安装kubernetes 1.10.0。脚本一共有8个模块组成分别是：
-
-1)、服务器初始化
-2)、依赖包安装
-3)、docker安装
-4)、导入镜像
-5)、kubernetes组建安装
-6)、kubernetes主节点初始化
-7)、dashboard安装
-8)、heapster监控安装
+该脚本用于在没网络环境下离线部署安装kubernetes 1.10.0。脚本一共有8个模块组成分别是：\n
+1)、服务器初始化 \n
+2)、依赖包安装 \n
+3)、docker安装 \n
+4)、导入镜像 \n
+5)、kubernetes组建安装 \n
+6)、kubernetes主节点初始化 \n
+7)、dashboard安装 \n
+8)、heapster监控安装 \n
 
 
 #### 适用环境：
@@ -26,7 +25,7 @@ centos 7.2(1511)/centos 7.3(1611)
 安装集群至少需要两个节点，将安装包下载到各个节点上，解压安装包进入安装包执行install脚本，
 按照序列号选项一步步进行安装，若以跳序安装则不能正常完成安装。
 
-setp 1:
+setp 1:\n
 Master安装：(Masetr的机器上安装1-5功能模块)
 ```
 [root@k8s-master1 k8s_1.10.0_file]# ./install.sh
@@ -46,14 +45,14 @@ Node安装：(Node的机器上安装1-5功能模块)
 3) install_docker     6) k8s_mster_initial
 Enter a Number:[1-5]
 ```
-setp 2：
+setp 2：\n
 
-Master和Node的/etc/hosts文件中添加：
-Master的IP  刚刚设置的Master的主机名 
-Node的IP    刚刚设置的Node的主机名 
+Master和Node的/etc/hosts文件中添加：\n
+Master的IP  刚刚设置的Master的主机名 \n
+Node的IP    刚刚设置的Node的主机名 \n
 
 
-setp 3:
+setp 3:\n
 Master安装：(Master的机器进行初始化master节点)
 ```
 [root@k8s-master1 k8s_1.10.0_file]# ./install.sh
@@ -75,6 +74,7 @@ Node节点：(node节点加入集群)：
 
 #### 相关的API端口和UI端口：
 ————————————————————————————————————————————————————
+1、 服务调用的Dashboard的非安全端口api:
    http://masterip:8080/api/v1/namespaces/kube-system/services/kubernetes-dashboard/
 
 2、influxdb的api:
